@@ -6,7 +6,9 @@ public class Customer {
     private int id;
     private String name;
     private String pin;
+
     // 1.2 composition  : "Has-A" relationship
+    // Between Class คือ Customer มี BankAccount
     private BankAccount account;
 
     public Customer(int id, String name, String pin) {
@@ -14,6 +16,17 @@ public class Customer {
         this.name = name;
         this.pin = pin;
         this.account = new BankAccount(id,name,"Saving");
+    }
+
+    public boolean checkPin(String pin){
+        boolean chk;
+        if(this.pin.equals(pin)){
+            chk = true;
+        }else {
+            chk = false;
+        }
+         return chk;
+ //       return this.pin.equals(pin);
     }
 
     public int getId() {

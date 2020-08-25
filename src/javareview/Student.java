@@ -15,7 +15,7 @@ public class Student {
         this.id = id;
         this.name = name;
     }
-    //--- method
+    //--- method คล้าย function
     public double getTotalScore(){
 
         return midtermScore + finalScore;
