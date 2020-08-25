@@ -31,6 +31,7 @@ public class Atm {
 
     public double getBalance(){
         return currentCustomer.getAccount().getBalance();
+
     }
     public void end(){
         currentCustomer = null;

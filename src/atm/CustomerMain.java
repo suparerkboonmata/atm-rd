@@ -4,9 +4,13 @@ public class CustomerMain {
     public static void main(String[] args) {
         Customer cust1 = new Customer(1,"Superman","1111");
         Customer cust2 = new Customer(2,"Supergirl","2222");
+
         Bank bk = new Bank("My Bank");
         bk.addCustomer(cust1);
         bk.addCustomer(cust2);
+
+        System.out.println(bk);
+
         Atm atm = new Atm(bk);
         atm.validateCustomer(1,"1111");
         atm.deposit(2500);
